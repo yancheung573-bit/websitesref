@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex 5</title>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        @keyframes border-color-animation {
+            0% { border-color: red; }
+            25% { border-color: blue; }
+            50% { border-color: green; }
+            75% { border-color: darkgoldenrod; }
+            100% { border-color: purple; }
+    }
+        #animal-container {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            border: 5px dotted red;
+            padding: 20px;
+            animation: border-color-animation 1s infinite;
+        }
+        .border{
+            border: 0px solid black;
+            padding:10px;
+            width: 200px;
+            height: 130px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 style="color:red;">LOOK AT THIS RANDOM ANIMAL GENRATOR!</h2>
+    <div id="animal-container">
+        <div class="border">
+        <img id="animal-img" src="animal00.jpg" alt="Animal Image">
+        </div>
+        <div class="arrow-container">
+            <img class="arrow-img" src="arrow_down.gif" width="30">
+            <span>Click Button Below!</span>
+            <img class="arrow-img" src="arrow_down.gif" width="30">
+        </div>
+        <br>
+        <button id="show-btn">Show Random Animal</button>
+    </div>
+    
+    <script src="ex5.js"></script>
+</html>

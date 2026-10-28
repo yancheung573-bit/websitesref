@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ex2</title>
+  <style>
+
+    @keyframes border-color-animation {
+      0% { border-color: red; }
+      25% { border-color: blue; }
+      50% { border-color: green; }
+      75% { border-color: darkgoldenrod; }
+      100% { border-color: purple; }
+    }
+    body{
+      text-align: center;
+      border:5px dashed red;
+      padding-left: 20px;
+      padding-bottom: 20px;
+      padding-right: 20px;
+      width: fit-content;
+      animation: border-color-animation 1s infinite;
+      
+    }
+    @keyframes head-color-animation {
+      0% { color: red; }
+      25% { color: blue; }
+      50% { color: green; }
+      75% { color: darkgoldenrod; }
+      100% { color: purple; }
+    }
+
+  #question{
+    animation: head-color-animation 1s infinite;
+  }
+
+
+  </style>
+</head>
+<body>
+  <h1>Division Learning Game For Children!</h1>
+
+  <div id="question">
+    <input type="text" id="dividend" readonly>
+    <input type="text" id="divisor" readonly>
+  </div>
+  <br>
+
+  <label for="quotient">Enter The Quotient:</label>
+  <input type="number" id="quotient" required>
+  <br>
+  <br>
+
+  <label for="remainder">Enter The Remainder:</label>
+  <input type="number" id="remainder" required>
+  <br>
+  <br>
+
+  <button id="submitButton">Submit Your Answer!</button>
+  <button id="newQuestionButton">New Question!</button>
+  <button id="resetButton" onclick="location.reload()">Reset Answers!</button>
+
+  <script src="ex2.js"></script>
+</body>
+</html>

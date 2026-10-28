@@ -1,0 +1,43 @@
+.disc{
+    color: red;
+}
+
+h3,h2{
+    text-decoration: underline;
+}
+
+h2{
+    text-align: center;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14.5px;
+    background-image: url("index/pedals.png");
+    background-size: 150%;
+}
+
+#moving-image {
+    position: absolute;
+    top: 39%;
+    transition: transform linear;
+    width: 35px;
+    transform-origin: top;
+}
+
+a{
+    color: rgb(255, 0, 242);
+    text-decoration: none;
+}
+
+@keyframes text{
+    0% {color:rgb(0, 0, 0)}
+    100%{color:rgb(204, 156, 0)}
+  }
+
+p:nth-of-type(3){
+    animation-name: text;
+    animation-duration: 1s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}  

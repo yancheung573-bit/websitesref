@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>ex1</title>
+
+        <script>
+            function flip() {
+                return Math.random() < 0.5; // Returns true for heads and false for tails
+            }
+
+            function TossCoin() {
+                var totalTosses = parseInt(document.getElementById("totalTosses").value);
+                var headsCount = 0;
+                var tailsCount = 0;
+
+            for (var i = 0; i < totalTosses; i++) {
+                var result = flip();
+
+                if (result) {
+                headsCount++;
+                } else {
+                tailsCount++;
+                }
+            }
+
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = `
+                <p>Total Tosses: ${totalTosses}</p>
+                <p>Heads count: ${headsCount}</p>
+                <p>Tails count: ${tailsCount}</p>
+                `;
+            }
+            
+            function refreshPage() {
+                location.reload();
+            }
+            
+        </script>
+    </head>
+    <body style="text-align: center; border: 5px solid black;display: inline-block;padding: 20">
+        <h1>Coin Tossing Simulation</h1>
+        Enter your number of tosses you want here:<br>
+        <br>
+        <input type="number" id="totalTosses">
+        <input name = "starttoss" type= "button" value="Toss" onClick="TossCoin()">
+        <input name="reset" type="button" value="Reset" onClick="refreshPage()">
+        <div id="result"></div>
+        
+    </body>
+</html>
