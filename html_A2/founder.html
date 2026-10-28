@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Founder</title>
+        <link rel="stylesheet" href="founder.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="column">
+                <h1>Please Enter The Password To Access.</h1>
+                <div class="box">
+                    <input type="password" id="passwordInput" >
+                    <br>
+                    <button onclick="checkPassword()">Submit</button>
+                <p id="message"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+        function checkPassword() {
+            var enteredPassword = document.getElementById("passwordInput").value;
+            var correctPassword = "JavaScript";
+
+            if (enteredPassword === correctPassword) {
+                document.getElementById("message").textContent = "Access granted! You entered the correct password.";
+    
+                window.location.href = "portfolio.html";
+            } else {
+                document.getElementById("message").textContent = "Access denied! Incorrect password.";
+            }
+        }
+        </script>
+    </body>
+</html>

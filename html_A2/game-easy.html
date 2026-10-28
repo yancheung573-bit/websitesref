@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="easy.css">
+    <title>easy Memory game</title>
+    
+    <script src="easy.js"></script>
+    <style>
+
+        .imgdiv{
+            position: relative;
+            display: inline-block;
+            width:150px;
+            height: 150px;
+            line-height: 150px;
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+            border: 2px solid greenyellow;
+            background-color: greenyellow;
+            border-radius: 20px;
+            cursor: pointer;
+
+            background-size: cover;
+            margin:10px
+        }
+        
+        img{
+            width:120px;
+            height: 120px;
+            padding: 10px;;
+        }
+
+        .hide{
+            padding: 10px;
+            visibility: hidden;
+        }
+
+        .match, .showimg{
+            visibility: visible !important;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class ="header">EASY Memory game!</h1>
+        
+        <button class="btn btn-success" onclick="start()">Start game</button><br><br>
+        <div id="score"></div>
+        <br>
+        <div id="boardgame"></div>
+    </div>
+    
+</body>
+</html>

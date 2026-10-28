@@ -1,0 +1,65 @@
+@keyframes change{
+  0%   {color: rgb(255, 97, 97);}
+  25%  {color: rgb(199, 191, 73);}
+  50%  {color: rgb(86, 226, 128);}
+  100% {color: rgb(86, 179, 255);}
+}
+
+h1{
+  font-size: 40px;
+  padding-top: 50px;
+  animation-name: change;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+
+}
+
+body{
+    text-align: center;
+    background-image: url(srcs/rainbow.png);
+    background-image: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img{
+    border: 10px solid transparent;
+    border-image: linear-gradient(to left, #0077ff, #ff67de) 1;
+    border-image-slice: 1;
+}
+
+* {box-sizing: border-box;}
+
+.container {
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    margin-right: 20px;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    
+
+  }
+  
+  .ball {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container:hover .ball {
+    opacity: 1;
+  }

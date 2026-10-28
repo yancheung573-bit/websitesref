@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <title>Products</title>
+        <link rel="stylesheet" href="product.css">
+
+    </head>
+    <body>
+        <h1>Products</h1>
+
+        <div class="container">
+        <a href="product1.html">
+        <img id="rope" src="srcs/jump_rope.png" width="400px">
+        </a>
+        <a href="product2.html">
+        <img id="shoes" src="srcs/running_shoes.jpg" width="400px">
+        </a>
+        </div>
+
+        <img id="sale" src="srcs/SALE.png" alt="Moving Image" width="350px">
+
+        <script>
+            const image = document.getElementById("rope");
+
+            image.addEventListener('mouseenter', () => {
+            image.src = "srcs/sportwear.png";
+            });
+
+            image.addEventListener('mouseleave', () => {
+            image.src = 'srcs/jump_rope.png';
+            });
+            
+            ////////
+            
+            const image1 = document.getElementById("shoes");
+
+            image1.addEventListener('mouseenter', () => {
+            image1.src = "srcs/sportsgear.png";
+            });
+
+            image1.addEventListener('mouseleave', () => {
+            image1.src = 'srcs/running_shoes.jpg';
+            });
+
+            ///
+
+            const image2 = document.getElementById('sale');
+            let position = 0;
+            let direction = 1;
+
+            setInterval(() => {
+            position += 1 * direction;
+
+            if (position >= 75 || position <= 0) {
+                direction *= -1;
+            }
+
+            image2.style.top = position + 'px';
+            }, 30);
+
+        </script>
+    </body>
+</HTML>

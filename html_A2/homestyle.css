@@ -1,0 +1,59 @@
+.header{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 50px;
+    line-height: 1.5em;
+}
+
+.box{
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20%;
+    padding: 50px;
+    background-color: rgba(240, 248, 255, 0.295);
+    border: 10px solid transparent;
+    border-image: linear-gradient(to right, #ff0000, #d0ff00) 1;
+    border-image-slice: 1;
+}
+
+body{
+    background-image: url(srcs/sport-bg.png);
+    background-size: cover;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+  
+#hire {
+    float: right;
+    position: relative;
+    border: 10px solid black;
+    margin-right: 5vh;
+    margin-top: -25vh; 
+
+}
+
+#rope{
+    transition: opacity 0.5 ease;
+
+}
+
+@keyframes fade {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .fade-out {
+    animation: fade 1s linear;
+  }
+  
+  .fade-in {
+    animation: fade 1s linear;
+  }
+
+.name{
+    color:red;
+    font-size: 60px;
+    font-style: oblique;
+}

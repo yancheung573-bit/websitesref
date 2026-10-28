@@ -1,0 +1,21 @@
+*{
+    text-align: center;
+}
+
+body{
+    background-image: url(srcs/green.png);
+    background-size: cover;
+    margin:75px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button{
+    width: 15vh;
+    height: 5vh;
+    font-size: large;
+    background-color: green;
+    border: 10px solid green;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
